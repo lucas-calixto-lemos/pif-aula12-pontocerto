@@ -4,8 +4,8 @@
 
 | Papel | Nome completo | Usuário do GitHub |
 |---|---|---|
-| Integrante 1 (dono do fork) | | |
-| Integrante 2 (colaborador) | | |
+| Integrante 1 Lucas Calixto | | |
+| Integrante 2 Sérgio Bione | | |
 
 ## Explicação da solução
 
