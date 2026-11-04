@@ -9,7 +9,7 @@
 
 ## Explicação da solução
 
-<!-- 3 a 5 linhas: como calculaPontos e as fábricas de campanhas eliminam a repetição de código? -->
+Antes cada campanha precisava de uma função de cálculo nova, quase igual às outras. Agora a gente tem só um `calculaPontos`, que recebe a regra como argumento e aplica no valor, então pra campanha nova basta passar outra regra. E as fábricas (`campanhaMultiplicadora` e `campanhaBonus`) criam as regras a partir de um número, assim não precisa escrever uma função pra "vezes 3", outra pra "vezes 5" etc, é só chamar `campanhaMultiplicadora 3` ou `campanhaMultiplicadora 5`.
 
 ## Desafio 2
 
