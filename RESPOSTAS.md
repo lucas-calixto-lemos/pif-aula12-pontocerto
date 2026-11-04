@@ -29,10 +29,10 @@ Não devolve um número, devolve outra função (uma regra que multiplica os pon
 
 | Erro | Função | O que estava errado | Como o GHC avisou (resumo da mensagem) | Como corrigimos |
 |---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
+| 1 | `fimDeSemana` | A lambda usava `=>` em vez de `->` (`\p => p * 4`), que é o jeito do JavaScript | `parse error on input '=>'` | Trocamos para `\p -> p * 4` |
+| 2 | `aplicaRegraDuasVezes` | A assinatura dizia que o primeiro argumento era `Int`, mas `regra` é usada como função | Não consegue casar o tipo: `regra` tem tipo `Int` mas está sendo aplicada a um valor como se fosse função | Mudamos a assinatura para `(Int -> Int) -> Int -> Int` |
+| 3 | `natal` | Faltava passar o bônus de 300 para a fábrica, então `natal` ficava sendo a própria `campanhaBonus` (`Int -> (Int -> Int)`) e não uma regra | `Couldn't match type`: esperava `Int -> Int` e recebeu `Int -> Int -> Int` | Escrevemos `natal = campanhaBonus 300` |
+| 4 | `promocaoAtual` | `pontosEmDobro 100` já calcula o número 200, então guardava um `Int` e não a função | `Couldn't match expected type 'Int -> Int' with actual type 'Int'` | Tiramos o `100`: `promocaoAtual = pontosEmDobro` |
 
 ## Desafio 6 — Haskell × C
 
