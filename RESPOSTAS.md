@@ -4,8 +4,8 @@
 
 | Papel | Nome completo | Usuário do GitHub |
 |---|---|---|
-| Integrante 1 Lucas Calixto | | |
-| Integrante 2 Sérgio Bione | | |
+| Integrante 1 | Lucas Calixto | lucas-calixto-lemos |
+| Integrante 2 | Sérgio Bione | |
 
 ## Explicação da solução
 
@@ -13,7 +13,7 @@
 
 ## Desafio 2
 
-<!-- Por que, nas duas promoções de um dia, faz sentido usar lambda em vez de função nomeada? -->
+Porque essas promoções só duram um dia e a regra é bem curta (`\p -> p * 3` e `\p -> p * 2 + 10`). Não vale a pena criar uma função com nome que só vai ser usada uma vez, então a gente escreve a regra direto na chamada do `calculaPontos`.
 
 ## Desafio 3
 
