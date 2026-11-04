@@ -36,7 +36,8 @@ Não devolve um número, devolve outra função (uma regra que multiplica os pon
 
 ## Desafio 6 — Haskell × C
 
-<!-- Cite duas diferenças entre o calculaPontos em Haskell e o calculaPontos em C. -->
+1. Em Haskell o tipo da regra é só `(Int -> Int)`, já em C tem que usar a sintaxe de ponteiro para função `int (*regra)(int)`, que é bem mais confusa.
+2. Em Haskell dá pra passar uma lambda direto pro `calculaPontos` (como na Promoção Relâmpago) e criar regras com as fábricas. Em C não tem lambda, então toda regra precisa ser uma função com nome escrita antes (`pontosEmDobro`, `bonus50`).
 
 ## Evidência de execução
 
@@ -55,5 +56,8 @@ Saída do `main` de `revisao.hs` (depois de corrigido):
 Saída de `pontocerto.c`:
 
 ```text
-(cole aqui)
+160
+130
+250
+300
 ```

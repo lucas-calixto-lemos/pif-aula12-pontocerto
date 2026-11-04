@@ -7,12 +7,29 @@
 
 /* Escreva aqui: pontosEmDobro, bonus50, calculaPontos e acumula. */
 
+int pontosEmDobro(int p) {
+    return p * 2;
+}
+
+int bonus50(int p) {
+    return p + 50;
+}
+
+/* regra eh um ponteiro pra funcao que recebe int e devolve int */
+int calculaPontos(int (*regra)(int), int valor) {
+    return regra(valor);
+}
+
+/* aplica a regra1 e depois a regra2 no resultado */
+int acumula(int (*regra1)(int), int (*regra2)(int), int valor) {
+    return regra2(regra1(valor));
+}
 
 int main(void) {
     /* Descomente cada linha conforme implementar. */
-    /* printf("%d\n", calculaPontos(pontosEmDobro, 80)); */
-    /* printf("%d\n", calculaPontos(bonus50, 80)); */
-    /* printf("%d\n", acumula(pontosEmDobro, bonus50, 100)); */
-    /* printf("%d\n", acumula(bonus50, pontosEmDobro, 100)); */
+    printf("%d\n", calculaPontos(pontosEmDobro, 80));
+    printf("%d\n", calculaPontos(bonus50, 80));
+    printf("%d\n", acumula(pontosEmDobro, bonus50, 100));
+    printf("%d\n", acumula(bonus50, pontosEmDobro, 100));
     return 0;
 }
