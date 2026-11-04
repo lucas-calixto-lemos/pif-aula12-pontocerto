@@ -21,9 +21,9 @@ Não devolve um número, devolve outra função (uma regra que multiplica os pon
 
 ## Desafio 4
 
-**a)** <!-- Por que as duas ordens dão resultados diferentes? -->
+**a)** Porque a ordem muda a conta. No primeiro, multiplica primeiro e depois soma o bônus: 150 * 5 = 750, + 200 = 950. No segundo, soma o bônus primeiro e depois multiplica tudo: (150 + 200) * 5 = 1750, ou seja, o bônus também acaba sendo multiplicado por 5.
 
-**b)** <!-- Qual ordem garante que o bônus de aniversário não seja multiplicado? Por quê? -->
+**b)** Tem que ser primeiro `blackFriday` e depois `aniversarioCliente`, ou seja, `acumula blackFriday aniversarioCliente`. Assim a multiplicação acontece antes e o bônus de 200 só é somado no final, sem ser multiplicado.
 
 ## Desafio 5 — revisão de código
 
