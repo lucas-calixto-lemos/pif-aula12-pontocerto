@@ -17,7 +17,7 @@ Porque essas promoções só duram um dia e a regra é bem curta (`\p -> p * 3` 
 
 ## Desafio 3
 
-<!-- O que campanhaMultiplicadora 5 devolve? Um número ou outra coisa? Como o :t confirma isso? -->
+Não devolve um número, devolve outra função (uma regra que multiplica os pontos por 5). Ela ainda tá esperando receber os pontos. O `:t campanhaMultiplicadora 5` mostra `Int -> Int`, que é o tipo de uma função que recebe um Int e devolve um Int. Se fosse um número ia aparecer só `Int`. Por isso o `:t blackFriday` também dá `Int -> Int`.
 
 ## Desafio 4
 
